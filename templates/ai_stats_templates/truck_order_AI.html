@@ -1,0 +1,49 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/UI/stats.css">
+    <title>AI Prediction Results</title>
+</head>
+<body>
+    <div class="links">
+        <a href="/home">Back to Home Page</a>
+    </div>
+    <h1>AI Prediction Results</h1>
+    <h2>Mean Squared Error: {{ mse }}</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Lava</th>
+                <th>AI Lava</th>
+                <th>Hot Fudge</th>
+                <th>AI Hot Fudge</th>
+                <th>Blizzard</th>
+                <th>AI Blizzard</th>
+                <th>Chocolate</th>
+                <th>AI Chocolate</th>
+                <th>Vanilla</th>
+                <th>AI Vanilla</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in results %}
+            <tr>
+                <td>{{ row[0] }}</td> 
+                <td>{{ row[1] }}</td> 
+                <td>{{ row[2] }}</td> 
+                <td>{{ row[3] }}</td>  
+                <td>{{ row[4] }}</td>  
+                <td>{{ row[5] }}</td>  
+                <td>{{ row[6] }}</td> 
+                <td>{{ row[7] }}</td>  
+                <td>{{ row[8] }}</td> 
+                <td>{{ row[9] }}</td>  
+                <td>{{ row[10] }}</td>  
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br><br>
+</body>
+</html>
